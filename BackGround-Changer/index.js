@@ -1,6 +1,10 @@
 const buttons = document.querySelectorAll('.button')
 const body = document.querySelector('body')
-
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].style.backgroundColor = document
+    .getElementsByClassName('button')
+    [i].getAttribute('id')
+}
 buttons.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     console.log(e)
